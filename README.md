@@ -1,5 +1,6 @@
 # Paradrop
-|build-status|
+[![Documentation Status](https://readthedocs.org/projects/paradrop/badge/?version=latest)](https://readthedocs.org/projects/paradrop/?badge=latest)
+
 
 Virtualized wireless routers. 
 
