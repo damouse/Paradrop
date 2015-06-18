@@ -14,18 +14,18 @@ Getting started with paradrop.
 ### Snappy
 [Snappy](https://developer.ubuntu.com/en/snappy/) is an Ubuntu release focusing on low-overhead for a large set of platforms. These instructions are for getting a Snappy instance up and running using 'kvm'. 
 
-1. Download and unzip a snappy image 
+Download and unzip a snappy image 
 ```
 wget http://releases.ubuntu.com/15.04/ubuntu-15.04-snappy-amd64-generic.img.xz
 unxz ubuntu-15.04-snappy-amd64-generic.img.xz
 ```
 
-2. Launch the snappy image using kvm
+Launch the snappy image using kvm
 ```
 kvm -m 512 -redir :8090::80 -redir :8022::22 ubuntu-15.04-snappy-amd64-generic.img
 ```
 
-3. Connect to local instance using ssh
+Connect to local instance using ssh
 ```
 ssh -p 8022 ubuntu@localhost
 ```

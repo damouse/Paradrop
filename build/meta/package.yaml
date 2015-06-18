@@ -1,0 +1,12 @@
+name: sandbox
+version: 0.1
+vendor: Snappy Developers <snappy-devel@lists.ubuntu.com>
+icon: meta/xkcd.png
+binaries:
+  - name: bin/importest
+    description: Does relative python imports or execution work?
+    caps: []
+  - name: bin/out.pex
+    caps:
+      - networking
+      - network-service

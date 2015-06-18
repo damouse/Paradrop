@@ -1,0 +1,33 @@
+#!/usr/bin/python
+
+import os
+import sys
+
+#What are the snappy env vars?
+def printPaths():
+    print 'Test: relative imports from www'
+
+    paths = {'Home':'HOME', 'App Path':'SNAP_APP_PATH', 'Data Path':'SNAP_APP_DATA_PATH'}
+
+    for k, v in paths.iteritems():
+        print k + ': ' + os.getenv(v, 'Var not found!')
+
+#Can we import modules not relative to the bin directory?
+def nonRelativeImports():
+    '''
+    The purpose of this test is to demonstrate that relative imports work
+    from literal folders. I mean this to demonstrate that its possible to 
+    embed libraries there, but that may not be wise.
+    '''
+    
+    os.chdir('www')
+    sys.path.append(os.getcwd())
+
+    #the remote script is in the www directory. This shows it can be imported
+    #and executed remotely. Note: shouldn't do this in production.
+    import remote
+    remote.test()
+
+if __name__ == "__main__":
+
+    printPaths()

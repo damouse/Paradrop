@@ -1,0 +1,1 @@
+from .spack import main
