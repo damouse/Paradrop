@@ -12,6 +12,7 @@ Work in progress. For now, assume everything here is subject to change.
 Instructions to follow. 
 
 ### Virtualenv
+(Note: not using virtualenv for pex configuration later, but it makes things easier.)
 virtualenv is a tool that allows developers to manage environments, dependancies and more for python programs. In this case its used both as a management tool and a packageing tool (along with pex.)
 
 We may choose to go with this as part of the build process since it doesn't require building the python package, but perhaps not. 
@@ -22,7 +23,7 @@ To load the current virtualenv, use
 To deactivate, use
     deactivate
 
-To install something like twisted (which we are going to need...) be sure to have python developer tools already installed:
+To install something like twisted be sure to have python developer tools already installed:
     sudo apt-get install python-dev
 
 ## Contributing
